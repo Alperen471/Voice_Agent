@@ -7,11 +7,14 @@ from livekit.agents import (
     JobContext,
     cli,
     room_io,
+    TurnHandlingOptions,
+    inference
 )
 from livekit.plugins import noise_cancellation, silero
-from livekit.plugins.turn_detector.multilingual import MultilingualModel
+from livekit.plugins.turn_detector import base
 
 from voice_agent import config
+from voice_agent.latency import attach_latency_logging
 from voice_agent.models import llm_model, stt_model, tts_model
 from voice_agent.recording import maybe_start_recording, save_conversation, wait_and_report_recording
 from voice_agent.tools import make_maths, web_search
@@ -38,13 +41,19 @@ async def entrypoint(ctx: JobContext) -> None:
     ctx.log_context_fields = {"room": ctx.room.name}
 
     session = AgentSession(
+        turn_handling=TurnHandlingOptions(
+            turn_detection=inference.TurnDetector(),
+            interruption={
+                "mode":"adaptive"
+            }
+        ),
         stt=stt_model,
         llm=llm_model,
         tts=tts_model,
         vad=silero.VAD.load(),
-        turn_detection=MultilingualModel(),
         tools=[make_maths, web_search],
     )
+    attach_latency_logging(session, ctx.room.name)
 
     recording_state: dict[str, str | None] = {"egress_id": None}
 

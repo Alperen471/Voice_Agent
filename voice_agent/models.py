@@ -3,30 +3,43 @@ import os
 from livekit.agents import stt,llm,tts,inference
 from livekit.plugins import openai,silero
 
+from plugins.faster_whisper_stt import FasterWhisperSTT, AlignedStreamAdapter
+
 from . import config  # noqa: F401  (.env dosyasını yükler)
 
 vad = silero.VAD.load()
 
 azure_stt = stt.StreamAdapter(
-    stt=openai.STT.with_azure(
+        stt=openai.STT.with_azure(
         model="gpt-4o-mini-transcribe",
         azure_deployment=os.getenv("STT_DEPLOYMENT_NAME"),
-        language="tr"
+        language="tr",
     ),
     vad=vad
 )
 
-stt_model = stt.FallbackAdapter([
-    azure_stt,
-    inference.STT.from_model_string("deepgram/nova-3")
-])
+whisper_stt = AlignedStreamAdapter(
+    stt_model=FasterWhisperSTT(
+    model_size="large-v3-turbo",
+    device="cuda",
+    compute_type="float16",
+    language="tr",
+    beam_size=1,
+    vad_filter=False
+),
+vad=vad
+)
+
+
+stt_model = whisper_stt
 
 
 llm_model=llm.FallbackAdapter(
     [
         openai.LLM.with_azure(
         model="gpt-4o-mini",
-        azure_deployment=os.getenv("LLM_DEPLOYMENT_NAME")
+        azure_deployment=os.getenv("LLM_DEPLOYMENT_NAME"),
+        
     ),
     inference.LLM("openai/gpt-4.1-mini")
     ]

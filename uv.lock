@@ -398,6 +398,28 @@ wheels = [
 ]
 
 [[package]]
+name = "ctranslate2"
+version = "4.8.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pyyaml" },
+    { name = "setuptools" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c6/66/39111224e418400d97fd79fbc9e72329c51f91a3e7a9c9a1a182e4f88022/ctranslate2-4.8.1-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:b4c3246aa4a7f309109a841ca743a72cc4abad4f93c0bf7da691023323215621", size = 1271321, upload-time = "2026-07-03T12:39:37.907Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/89/13f827fae226eea51315729c00111f716813d7736ebb827fecb8f361fe0d/ctranslate2-4.8.1-cp314-cp314-macosx_11_0_x86_64.whl", hash = "sha256:c989f747789e8619cbc2e06443b3674c31bc71bad0369652485bd894b627360a", size = 11930735, upload-time = "2026-07-03T12:39:39.534Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/94/4b73f9bbaba29df4227cc65114f11d83fe6d696ef3705cb1ade79eb118fd/ctranslate2-4.8.1-cp314-cp314-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c90eb0bd67b6bb183712cc3fd14bf01ec4f622cd625c5b33cc6c56be7d1c9c34", size = 16872460, upload-time = "2026-07-03T12:39:42.272Z" },
+    { url = "https://files.pythonhosted.org/packages/ee/d0/9816494d5ff0745bdf9abe5af04e57a103a416444e604cbe83a6eb0aed7b/ctranslate2-4.8.1-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:e3e3aef4670a6c8dcea367401675f82b49b02c18f5837221bcd7cca90b1707a8", size = 39494736, upload-time = "2026-07-03T12:39:45.733Z" },
+    { url = "https://files.pythonhosted.org/packages/6c/dc/22a2c874ca8bb6caa7018dfefdff92dddd487db31cf169891c4c6d408091/ctranslate2-4.8.1-cp314-cp314-win_amd64.whl", hash = "sha256:a2dcce0a57beee984a691d9daa8fc3fd389f5b6cada2644c34571011833bd5b1", size = 19477164, upload-time = "2026-07-03T12:39:48.952Z" },
+    { url = "https://files.pythonhosted.org/packages/77/39/7b8d47bf49748ba73182742683eef74b46608beb879765d9d4efc46bc345/ctranslate2-4.8.1-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:7a28c5889585cd17ee3649dfd46d9002ddf50204173f8bff476b9f76d6585795", size = 1293935, upload-time = "2026-07-03T12:39:50.924Z" },
+    { url = "https://files.pythonhosted.org/packages/c1/20/434e30c752c433eaef5deccd4de54775bc1f205a6fe6c9e756b737018209/ctranslate2-4.8.1-cp314-cp314t-macosx_11_0_x86_64.whl", hash = "sha256:911a5cdef8a405c1804330613a1865f616eb9c092a0e932ee4648128eb20b627", size = 11951789, upload-time = "2026-07-03T12:39:52.886Z" },
+    { url = "https://files.pythonhosted.org/packages/85/f2/d716426220b462bbb5bb354b9c6c8d9a41285f067203c860cc79f9f19917/ctranslate2-4.8.1-cp314-cp314t-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:84723cae6f802551bbf2438e5e4810722631a2183b89a82c31df26566b54821d", size = 16860414, upload-time = "2026-07-03T12:39:55.54Z" },
+    { url = "https://files.pythonhosted.org/packages/69/11/cdab0e7e2ad4e547f15ab227c09207569f1272abae05816900ecebb0797a/ctranslate2-4.8.1-cp314-cp314t-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:1910752ec541980644191fa3b407bc61dee00e88070b0aed29b4cef75010b3ea", size = 39465200, upload-time = "2026-07-03T12:39:59.017Z" },
+    { url = "https://files.pythonhosted.org/packages/c0/03/126e963fc3237a416f3085b8a663ebd8ab449ed6c37195b4e0b49597ba0c/ctranslate2-4.8.1-cp314-cp314t-win_amd64.whl", hash = "sha256:dc9f1abef55579cc02cdc74b3a55df38491ec56d177d6e6039609d61d09ed30e", size = 19499597, upload-time = "2026-07-03T12:40:01.68Z" },
+]
+
+[[package]]
 name = "deprecation"
 version = "2.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -450,6 +472,22 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/8a/02/91e3416a8fdd715abb903a952a6bec7cdd8d14eed55d415fc8595524c319/fastapi-0.141.1.tar.gz", hash = "sha256:e8822fc40db1e1858054d7a949a888695bc9bdce70139178e33bd2871a453ca1", size = 425799, upload-time = "2026-07-29T17:18:05.568Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cb/03/10388a42375ee7e4ac9b94eb2c5c569c8b5795e377e701c9ac3ad63de890/fastapi-0.141.1-py3-none-any.whl", hash = "sha256:bfb91aa2d334c61cb35ba9a116fc123b3d3df31640b801cf57a7a78ec3f603b3", size = 131954, upload-time = "2026-07-29T17:18:04.364Z" },
+]
+
+[[package]]
+name = "faster-whisper"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "av" },
+    { name = "ctranslate2" },
+    { name = "huggingface-hub" },
+    { name = "onnxruntime" },
+    { name = "tokenizers" },
+    { name = "tqdm" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/05/99/49ee85903dee060d9f08297b4a342e5e0bcfca2f027a07b4ee0a38ab13f9/faster_whisper-1.2.1-py3-none-any.whl", hash = "sha256:79a66ad50688c0b794dd501dc340a736992a6342f7f95e5811be60b5224a26a7", size = 1118909, upload-time = "2025-10-31T11:35:47.794Z" },
 ]
 
 [[package]]
@@ -936,6 +974,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "asgiref" },
     { name = "fastapi" },
+    { name = "faster-whisper" },
     { name = "httpx" },
     { name = "livekit-agents", extra = ["openai", "silero", "turn-detector"] },
     { name = "livekit-plugins-noise-cancellation" },
@@ -951,6 +990,7 @@ dependencies = [
 requires-dist = [
     { name = "asgiref", specifier = ">=3.12.1" },
     { name = "fastapi", specifier = ">=0.141.1" },
+    { name = "faster-whisper", specifier = ">=1.2.1" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "livekit-agents", extras = ["openai", "silero", "turn-detector"], specifier = "~=1.5" },
     { name = "livekit-plugins-noise-cancellation", specifier = ">=0.3.0" },
@@ -1676,6 +1716,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/8e/3f/73ccf82579412b4a71c4ca673f10b5f1f888d7cf5af7fe24f27d30307be4/safetensors-0.8.0-cp310-abi3-win32.whl", hash = "sha256:2ddf52eac562eda224f99acfa7889d02968c1fd59a5b011ae7d8137c37e9c02d", size = 342401, upload-time = "2026-06-09T07:52:28.895Z" },
     { url = "https://files.pythonhosted.org/packages/1b/6d/3fba214c1e5e0f69991677ec3bc17023f0421776975e1de0c682dca475e2/safetensors-0.8.0-cp310-abi3-win_amd64.whl", hash = "sha256:096ec1a98435df7beb08853bb5aa9081a84f23d0adc67ed1a0a10550f608373f", size = 355540, upload-time = "2026-06-09T07:52:27.832Z" },
     { url = "https://files.pythonhosted.org/packages/8d/fc/7eedc3510d97878876e32774eebbeb61c43f148a96e915c84229a3e967aa/safetensors-0.8.0-cp310-abi3-win_arm64.whl", hash = "sha256:f7838e5135a406ad3e02efdcb8cf2e5397d368b0154537c4fec682dbc544d452", size = 340500, upload-time = "2026-06-09T07:52:26.745Z" },
+]
+
+[[package]]
+name = "setuptools"
+version = "84.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6d/44/f5da03a8ef95d369145c5bb53050e7877c9f3d312e128605fd9504829143/setuptools-84.0.0.tar.gz", hash = "sha256:f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73", size = 1168449, upload-time = "2026-08-08T18:27:58.365Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/95/9c/c510029fc6ef33a6275cd2c5d3cecd6613dfd6aa401d57c54f1c18852ccf/setuptools-84.0.0-py3-none-any.whl", hash = "sha256:51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670", size = 818216, upload-time = "2026-08-08T18:27:56.719Z" },
 ]
 
 [[package]]
